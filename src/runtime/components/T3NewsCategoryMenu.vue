@@ -3,15 +3,15 @@
         <T3Header :content-element="contentElement" />
         <div class="t3-news-category-menu__links">
             <NuxtLink
-                :to="contentElement.content.data.categories.all.slug"
+                :to="contentElement.content.data.categories.all.link"
                 class="t3-news-category-menu__link"
             >
                 Alle (TODO)
             </NuxtLink>
             <NuxtLink
                 v-for="category in contentElement.content.data.categories.list"
-                :key="category.slug"
-                :to="category.slug"
+                :key="category.link"
+                :to="category.link"
                 class="t3-news-category-menu__link"
                 >{{ category.title }}</NuxtLink
             >

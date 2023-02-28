@@ -1,12 +1,12 @@
 import { computed, Ref } from 'vue'
-import { T3Model } from '#nuxt-typo3'
+import { T3Api } from '#nuxt-typo3'
 import { useRuntimeConfig } from '#app'
 import { T3NewsApi } from '#nuxt-typo3-news'
 
 export function useT3NewsList(content: Ref<T3NewsApi.NewsPiList>) {
     const config = useRuntimeConfig().public.typo3News
 
-    const pagination = computed<T3Model.Pagination | undefined>(
+    const pagination = computed<T3Api.Pagination | undefined>(
         () => content.value.data.pagination
     )
 

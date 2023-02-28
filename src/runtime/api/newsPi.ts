@@ -20,7 +20,7 @@ export interface NewsPiCategoryMenu extends T3Api.Content.Base {
     data: {
         categories: {
             all: {
-                slug: string
+                link: string
                 active: boolean
             }
             list: Category[]
@@ -33,7 +33,7 @@ export interface NewsPiDateMenu extends T3Api.Content.Base {
     data: {
         years: {
             all: {
-                slug: string
+                link: string
                 active: boolean
             }
             list: Year[]
@@ -46,7 +46,7 @@ export interface NewsPiTagsList extends T3Api.Content.Base {
     data: {
         tags: {
             all: {
-                slug: string
+                link: string
                 active: boolean
             }
             list: Tag[]

@@ -1,13 +1,13 @@
 interface Month {
     title: string
-    slug: string
+    link: string
     active: boolean
     count: number
 }
 
 export interface Year {
     title: number
-    slug: string
+    link: string
     active: boolean
     count: number
     months?: Month[]

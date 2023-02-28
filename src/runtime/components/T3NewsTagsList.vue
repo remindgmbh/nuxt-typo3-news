@@ -2,13 +2,13 @@
     <div class="t3-news-tags-list">
         <T3Header :content-element="contentElement" />
         <div class="t3-news-tags-list__links">
-            <NuxtLink :to="contentElement.content.data.tags.all.slug">
+            <NuxtLink :to="contentElement.content.data.tags.all.link">
                 Alle (TODO)
             </NuxtLink>
             <NuxtLink
                 v-for="tag in contentElement.content.data.tags.list"
-                :key="tag.slug"
-                :to="tag.slug"
+                :key="tag.link"
+                :to="tag.link"
                 class="t3-news-tags-list__link"
                 >{{ tag.title }}</NuxtLink
             >

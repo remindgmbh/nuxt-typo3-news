@@ -2,13 +2,13 @@
     <div class="t3-news-date-menu">
         <T3Header :content-element="contentElement" />
         <div class="t3-news-date-menu__links">
-            <NuxtLink :to="contentElement.content.data.years.all.slug">
+            <NuxtLink :to="contentElement.content.data.years.all.link">
                 Alle (TODO)
             </NuxtLink>
             <NuxtLink
                 v-for="year in contentElement.content.data.years.list"
-                :key="year.slug"
-                :to="year.slug"
+                :key="year.link"
+                :to="year.link"
                 class="t3-news-tags-list__link"
                 >{{ year.title }} ({{ year.count }})</NuxtLink
             >

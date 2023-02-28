@@ -2,6 +2,7 @@ export interface Tag {
     uid?: number
     pid?: number
     title: string
+    link: string
     slug: string
     active: boolean
     seo?: {

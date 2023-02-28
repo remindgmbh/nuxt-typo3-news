@@ -35,7 +35,8 @@
 
 <script setup lang="ts">
 import { T3Api } from '#nuxt-typo3'
-import { useT3CeNewsPi1, T3NewsApi } from '#nuxt-typo3-news'
+import { T3NewsApi } from '#nuxt-typo3-news'
+import { useT3CeNewsPi1 } from '#nuxt-typo3-news/composables/useT3CeNewsPi1'
 
 defineProps<{
     contentElement: T3Api.ContentElement<T3NewsApi.NewsPi>

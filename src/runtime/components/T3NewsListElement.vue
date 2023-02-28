@@ -17,7 +17,8 @@
 </template>
 
 <script setup lang="ts">
-import { T3NewsApi, useT3NewsListElement } from '#nuxt-typo3-news'
+import { T3NewsApi } from '#nuxt-typo3-news'
+import { useT3NewsListElement } from '#nuxt-typo3-news/composables/useT3NewsListElement'
 
 const props = defineProps<{
     listElement: T3NewsApi.ListElement

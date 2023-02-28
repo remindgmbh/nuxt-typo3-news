@@ -24,7 +24,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { T3Api } from '#nuxt-typo3'
-import { T3NewsApi, useT3NewsList } from '#nuxt-typo3-news'
+import { T3NewsApi } from '#nuxt-typo3-news'
+import { useT3NewsList } from '#nuxt-typo3-news/composables/useT3NewsList'
 
 const props = defineProps<{
     contentElement: T3Api.ContentElement<T3NewsApi.NewsPiList>

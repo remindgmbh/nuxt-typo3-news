@@ -6,7 +6,7 @@
                 :to="contentElement.content.data.categories.all.link"
                 class="t3-news-category-menu__link"
             >
-                Alle (TODO)
+                {{ $t('news.categoryMenu.all') }}
             </NuxtLink>
             <NuxtLink
                 v-for="category in contentElement.content.data.categories.list"

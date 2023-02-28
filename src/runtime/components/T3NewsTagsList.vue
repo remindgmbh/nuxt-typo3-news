@@ -3,7 +3,7 @@
         <T3Header :content-element="contentElement" />
         <div class="t3-news-tags-list__links">
             <NuxtLink :to="contentElement.content.data.tags.all.link">
-                Alle (TODO)
+                {{ $t('news.tagsList.all') }}
             </NuxtLink>
             <NuxtLink
                 v-for="tag in contentElement.content.data.tags.list"

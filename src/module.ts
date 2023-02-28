@@ -1,6 +1,7 @@
 import {
     addImportsDir,
     addComponentsDir,
+    addPlugin,
     createResolver,
     defineNuxtModule,
 } from '@nuxt/kit'
@@ -37,6 +38,9 @@ export default defineNuxtModule<ModuleOptions>({
 
         nuxt.options.alias['#nuxt-typo3-news'] = resolver.resolve('runtime')
 
+        addPlugin({
+            src: resolver.resolve('runtime/plugins/i18n'),
+        })
         addImportsDir([resolver.resolve('runtime/composables/use*.*')])
         addComponentsDir({
             path: resolver.resolve('runtime/components'),

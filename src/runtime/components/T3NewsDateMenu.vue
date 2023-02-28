@@ -3,7 +3,9 @@
         <T3Header :content-element="contentElement" />
         <div class="t3-news-date-menu__links">
             <NuxtLink :to="contentElement.content.data.years.all.link">
-                Alle (TODO)
+                {{ $t('news.dateMenu.all') }} ({{
+                    contentElement.content.data.years.all.count
+                }})
             </NuxtLink>
             <NuxtLink
                 v-for="year in contentElement.content.data.years.list"

@@ -35,6 +35,7 @@ export interface NewsPiDateMenu extends T3Api.Content.Base {
             all: {
                 link: string
                 active: boolean
+                count: number
             }
             list: Year[]
         }

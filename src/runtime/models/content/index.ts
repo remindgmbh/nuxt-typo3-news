@@ -1,0 +1,5 @@
+export type { CategoryMenu } from './categoryMenu'
+export type { DateMenu } from './dateMenu'
+export type { NewsDetail } from './newsDetail'
+export type { NewsList } from './newsList'
+export type { TagsList } from './tagsList'

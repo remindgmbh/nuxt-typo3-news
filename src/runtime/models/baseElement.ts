@@ -1,4 +1,4 @@
-import { T3Api } from '#nuxt-typo3'
+import { T3Model } from '#imports'
 
 export interface BaseElement {
     uid: number
@@ -10,12 +10,11 @@ export interface BaseElement {
     datetime: string
     archive?: string
     author: {
-        author: string
-        authorEmail: string
+        name: string
+        email: string
     }
-    media: T3Api.Asset[]
+    relatedFiles: T3Model.Typo3.Asset[]
     // TODO specify types
-    falRelatedFiles: []
     categories: []
     tags: []
     metaData: {
@@ -24,4 +23,5 @@ export interface BaseElement {
         alternativeTitle: string
     }
     pathSegment: string
+    media: T3Model.Typo3.Asset[]
 }

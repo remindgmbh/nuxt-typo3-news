@@ -1,5 +1,5 @@
-import { BaseElement } from '.'
+import type { BaseElement } from '.'
 
 export interface ListElement extends BaseElement {
-    slug: string
+    link: string
 }

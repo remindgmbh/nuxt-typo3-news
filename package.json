@@ -1,15 +1,16 @@
 {
     "name": "@remindgmbh/nuxt-typo3-news",
-    "version": "1.0.0",
+    "version": "0.0.0-development",
     "author": "David Mellen <d.mellen@remind.de>",
     "license": "BSD-3-Clause",
     "repository": {
         "type": "git",
-        "url": "https://github.com/remindgmbh/nuxt-typo3-news"
+        "url": "git+https://github.com/remindgmbh/nuxt-typo3-news.git"
     },
     "type": "module",
     "exports": {
         ".": {
+            "types": "./dist/types.d.ts",
             "import": "./dist/module.mjs",
             "require": "./dist/module.cjs"
         }
@@ -20,34 +21,31 @@
         "dist"
     ],
     "scripts": {
-        "dev": "yarn stub && nuxi dev playground",
+        "dev": "npm run dev:prepare && nuxi dev playground",
         "dev:build": "nuxi build playground",
-        "lint": "yarn lint:prettier && yarn lint:script && yarn lint:style",
-        "lint:prettier": "prettier --check .",
+        "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+        "lint": "npm run lint:script",
         "lint:script": "eslint --ext \".js,.ts,.vue\" .",
-        "lint:style": "stylelint \"**/*.{vue,[s]css}\"",
-        "prepare": "yarn stub && nuxt-module-build",
-        "prepublish": "yarn lint",
+        "prepack": "npm run dev:prepare && nuxt-module-build build",
         "preview": "nuxi preview playground",
-        "stub": "nuxt-module-build --stub && nuxi prepare playground"
+        "static-analysis": "npm run dev:prepare && npm run typecheck && npm run lint",
+        "typecheck": "nuxi typecheck"
     },
     "dependencies": {
-        "@nuxt/kit": "^3.2.2",
-        "defu": "^6.1.2"
+        "@nuxt/kit": "^3.9.3"
+    },
+    "peerDependencies": {
+        "@remindgmbh/nuxt-typo3": "^4.0.0 || ^4.0.0-develop"
     },
     "devDependencies": {
-        "@nuxt/module-builder": "^0.2.1",
-        "@nuxt/schema": "^3.2.2",
-        "@remindgmbh/eslint-config-nuxt": "^1.0.4",
-        "@remindgmbh/nuxt-typo3": "ssh://git@github.com:remindgmbh/nuxt-typo3#develop",
-        "@remindgmbh/stylelint-config": "^1.0.1",
-        "@types/node": "^18.14.2",
-        "eslint": "^8.35.0",
-        "nuxt": "^3.2.2",
-        "postcss": "^8.4.21",
-        "postcss-html": "^1.5.0",
-        "postcss-scss": "^4.0.6",
-        "prettier": "^2.8.4",
-        "stylelint": "^15.2.0"
+        "@nuxt/module-builder": "^0.5.5",
+        "@nuxt/schema": "^3.9.3",
+        "@remindgmbh/eslint-config-nuxt": "^1.1.0",
+        "@remindgmbh/nuxt-typo3": "^4.0.0-develop",
+        "@types/node": "^20.11.16",
+        "eslint": "^8.56.0",
+        "nuxt": "^3.9.3",
+        "prettier": "^3.2.5",
+        "typescript": "^5.3.3"
     }
 }

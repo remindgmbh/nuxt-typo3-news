@@ -7,6 +7,9 @@
         "type": "git",
         "url": "git+https://github.com/remindgmbh/nuxt-typo3-news.git"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "type": "module",
     "exports": {
         ".": {

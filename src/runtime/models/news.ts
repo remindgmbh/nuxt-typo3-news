@@ -1,6 +1,7 @@
+import type { Category, Tag } from '.'
 import { T3Model } from '#imports'
 
-export interface BaseElement {
+export interface News {
     uid: number
     title: string
     teaser: string
@@ -14,9 +15,8 @@ export interface BaseElement {
         email: string
     }
     relatedFiles: T3Model.Typo3.Asset[]
-    // TODO specify types
-    categories: []
-    tags: []
+    categories: Category[]
+    tags: Tag[]
     metaData: {
         keywords: string
         description: string

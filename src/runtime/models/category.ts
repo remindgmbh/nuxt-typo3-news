@@ -2,9 +2,8 @@ export interface Category {
     uid?: number
     pid?: number
     title: string
-    link: string
+    description: string
     slug: string
-    active: boolean
     seo?: {
         title: string
         description: string

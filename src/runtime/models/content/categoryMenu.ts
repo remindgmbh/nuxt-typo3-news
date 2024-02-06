@@ -1,4 +1,4 @@
-import type { Category, Settings } from '..'
+import type { ListCategory, Settings } from '..'
 import { T3Model } from '#imports'
 
 export interface CategoryMenu extends T3Model.Typo3.Content.Data.Header {
@@ -8,7 +8,7 @@ export interface CategoryMenu extends T3Model.Typo3.Content.Data.Header {
                 link: string
                 active: boolean
             }
-            list: Category[]
+            list: ListCategory[]
         }
         settings: Settings
     }

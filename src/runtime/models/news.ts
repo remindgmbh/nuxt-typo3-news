@@ -1,5 +1,5 @@
 import type { Category, Tag } from '.'
-import { T3Model } from '#imports'
+import type { T3Model } from '#imports'
 
 export interface News {
     uid: number
@@ -14,7 +14,7 @@ export interface News {
         name: string
         email: string
     }
-    relatedFiles: T3Model.Typo3.Asset[]
+    relatedFiles: (typeof T3Model.Typo3.Asset)[]
     categories: Category[]
     tags: Tag[]
     metaData: {
@@ -23,5 +23,5 @@ export interface News {
         alternativeTitle: string
     }
     pathSegment: string
-    media: T3Model.Typo3.Asset[]
+    media: (typeof T3Model.Typo3.Asset)[]
 }

@@ -1,13 +1,18 @@
 export default defineNuxtConfig({
-    modules: ['@remindgmbh/nuxt-typo3', '@remindgmbh/nuxt-typo3-news'],
+    modules: [
+        '@remindgmbh/nuxt-logger',
+        '@remindgmbh/nuxt-typo3',
+        '@remindgmbh/nuxt-typo3-news',
+    ],
     runtimeConfig: {
         public: {
             typo3: {
                 api: {
                     baseUrl: '',
                 },
-                baseUrl: '',
-                cookiebotUid: '',
+            },
+            typo3Cookiebot: {
+                cbid: '',
             },
         },
     },
